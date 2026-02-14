@@ -1,0 +1,76 @@
+# valentine
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Meseteo ❤️</title>
+<style>
+body {
+  background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff2e63;
+  color: white;
+}
+
+#no {
+  background: white;
+  color: #ff2e63;
+  position: absolute;
+}
+
+img {
+  width: 200px;
+  border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Meseteo… 💌</h1>
+<p>You became my favorite thought without warning.</p>
+<h1>Will you be my Valentine? ❤️</h1>
+
+<img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+
+<br><br>
+
+<button id="yes" onclick="yesClick()">Yes ❤️</button>
+<button id="no" onmouseover="moveNo()">No 😢</button>
+
+<script>
+function moveNo() {
+  var button = document.getElementById("no");
+  button.style.top = Math.random() * window.innerHeight + "px";
+  button.style.left = Math.random() * window.innerWidth + "px";
+}
+
+function yesClick() {
+  document.body.innerHTML = `
+  <h1 style="margin-top:150px;">You just made me the happiest guy alive ❤️</h1>
+  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="250">
+  `;
+}
+</script>
+
+</body>
+</html>
